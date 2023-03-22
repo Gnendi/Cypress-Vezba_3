@@ -14,9 +14,9 @@ describe ('login case', () => {
 
     it ('positive case / delete board', () => {
         deleteBoard.addNewOrg.should('exist')
-        deleteBoard.addNewOrg.should('not.be.visible')
-        deleteBoard.addNewOrg.should('have.class', 'vs-c-my-organization--add-new')
-        deleteBoard.addNewOrg.should('have.css', 'background-color', 'rgb(230, 230, 230)')
+        .and('not.be.visible')
+        .and('have.class', 'vs-c-my-organization--add-new')
+        .and('have.css', 'background-color', 'rgb(230, 230, 230)')
         deleteBoard.clickAddNewOrg()
         deleteBoard.newOrganisationWindowInput.type(faker.lorem.words())
         deleteBoard.nextBtn.click()
